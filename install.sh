@@ -31,9 +31,8 @@ function stow_con() {
                             ".gitignore"
                             ".gitmodules"
                             "README.md"
-                            "screen1.png"
-                            "screen2.png"
-                            "screen3.png"
+                            "spotify.png"
+                            "ufetch_cava"
                             "screen4.png"
                         )
 

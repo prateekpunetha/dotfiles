@@ -9,7 +9,6 @@
 - [Screenshots](Screenshots)
   - [Clean](#Clean)
   - [Spotify](#Spotify)
-  - [Firefox](#Firefox)
   - [Rofi Launcher](#rofi-launcher)
 
 ## Requirements
@@ -42,7 +41,7 @@
 
 ## Installation
 
-- `git clone --recurse-submodules https://github.com/Blacksuan19/Dotfiles ~/.dotfiles`
+- `git clone --recurse-submodules https://github.com/prateekpunetha/Dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `./install.sh` to install everything (including fonts).
 
@@ -57,9 +56,9 @@ set your default apps from sxhkd settings
 | ----------------------- | ---------------------------------------------------------- |
 | win key(mod/super)      | launch rofi                                                |
 | super + F1              | show keyboard shortcuts in a window                        |
-| super + w               | launch browser (default is google chrome)                  |
+| super + w               | launch browser (default is firefox)                        |
 | super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is vifm)                      |
+| super + f               | launch file manager (default is PCManFM)                   |
 | super + shift + r       | reload sxhkd settings                                      |
 | super + q               | kill current window                                        |
 | super + g               | swap current window with the biggest                       |
@@ -83,15 +82,11 @@ set your default apps from sxhkd settings
 
 #### Clean
 
-![desktop](./screen1.png)
+![desktop](./ufetch_cava.png)
 
 #### Spotify
 
-![lockscreen](./screen2.png)
-
-#### Firefox
-
-![keyboard shortcuts](./screen3.png)
+![lockscreen](./spotify.png)
 
 #### Rofi launcher
 
