@@ -56,7 +56,7 @@ bspc rule -a feh state=floating follow=on
 # 1 > terminal
 bspc rule -a kitty desktop='^1' follow=on focus=on
 # 2 > web
-bspc rule -a Brave-browser desktop='^2'
+bspc rule -a firefox desktop='^2'
 # 3 > telegram
 bspc rule -a KotatogramDesktop desktop='^3'
 # 4 > notion
