@@ -14,10 +14,6 @@ super + {w,f,s,t,o}
 super + {F1,v,x,c}
    rofi_run {-s,-c,-l,-q}
 
-# get a new wallpaper
-super + {n,q}
-    {unsplash.sh,bspc node -c}
-
 # set the window state
 super + {F9,F10,F11}
     bspc node --state {tiled,floating,fullscreen}

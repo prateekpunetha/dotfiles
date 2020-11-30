@@ -21,9 +21,6 @@ ksuperkey -e 'Super_R=Alt_L|F1' &
 # keyboard repeat rate
 xset r rate 500 30
 
-# natural scrolling
-xinput --set-prop 15 "libinput Natural Scrolling Enabled" 1
-
 # auto sleep after 20 min (turn the screen off 600 seconds before)
 xautolock -notify 600 -time 30 \
           -notifier "xset dpms force off" \
