@@ -14,6 +14,10 @@ super + {w,f,s,t,o}
 super + {F1,v,x,c}
    rofi_run {-s,-c,-l,-q}
 
+# quit the window
+super + {q}
+    {bspc node -c}
+
 # set the window state
 super + {F9,F10,F11}
     bspc node --state {tiled,floating,fullscreen}
