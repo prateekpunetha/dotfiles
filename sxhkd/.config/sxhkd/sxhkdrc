@@ -66,6 +66,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
    change-volume mute
 
+# toggle mic mute
+XF86AudioMicMute
+    mictoggle
+
 # increase/decrease brightness by 10
 XF86MonBrightness{Up,Down}
     change-brightness {up,down}
