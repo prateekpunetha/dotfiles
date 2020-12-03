@@ -37,7 +37,6 @@ blue-gray = #546e7a
 
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
 
 screenchange-reload = false
 
