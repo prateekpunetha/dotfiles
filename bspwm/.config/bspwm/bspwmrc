@@ -16,7 +16,7 @@ sxhkd &
 unclutter -idle 2 &
 
 # picom
-picom -b
+picom --experimental-backends -b
 
 # start redshift
 redshift -t 6500:5200 -l geoclue2 &
