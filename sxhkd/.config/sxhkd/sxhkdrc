@@ -74,9 +74,9 @@ XF86AudioMicMute
 XF86MonBrightness{Up,Down}
     change-brightness {up,down}
 
-# next, previous, play-pause toggle
-XF86Audio{Next,Prev,Play}
-    playerctl {next,previous,play-pause}
+# next, previous, play, pause toggle
+ctrl + {Right,Left,Up,Down}
+    playerctl {next,previous,play,pause}
 
 # hybrid sleep
 XF86Sleep
