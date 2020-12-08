@@ -16,12 +16,6 @@ light -S 40
 
 # super alone simulates Alt-F1
 ksuperkey -e 'Super_L=Alt_L|F1' &
-ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # keyboard repeat rate
 xset r rate 500 30
-
-# auto sleep after 20 min (turn the screen off 600 seconds before)
-xautolock -notify 600 -time 30 \
-          -notifier "xset dpms force off" \
-          -killer "sudo zzz" &
