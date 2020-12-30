@@ -9,7 +9,6 @@
 - [Screenshots](Screenshots)
   - [Clean](#Clean)
   - [Spotify](#Spotify)
-  - [Rofi Launcher](#rofi-launcher)
 
 ## Requirements
 
@@ -27,7 +26,6 @@
   - rofi (applications window)
   - polybar (top bar)
   - ksuperkey (map meta to open rofi)
-  - xautolock (auto lockscreen)
   - light (brightness control)
   - playerctl (control current player with media keys)
   - flameshot (for taking screenshots)
@@ -41,7 +39,7 @@
 
 ## Installation
 
-- `git clone --recurse-submodules https://github.com/prateekpunetha/Dotfiles ~/.dotfiles`
+- `git clone --recurse-submodules https://github.com/prateekpunetha/dotfiles ~/.dotfiles`
 - `cd ~/.dotfiles`
 - `./install.sh` to install everything (including fonts).
 
@@ -56,9 +54,9 @@ set your default apps from sxhkd settings
 | ----------------------- | ---------------------------------------------------------- |
 | win key(mod/super)      | launch rofi                                                |
 | super + F1              | show keyboard shortcuts in a window                        |
-| super + w               | launch browser (default is firefox)                        |
+| super + w               | launch browser (default is brave)                          |
 | super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is PCManFM)                   |
+| super + f               | launch file manager (default is Nautilus)                  |
 | super + shift + r       | reload sxhkd settings                                      |
 | super + q               | kill current window                                        |
 | super + g               | swap current window with the biggest                       |
@@ -76,7 +74,7 @@ set your default apps from sxhkd settings
 | print + shift           | launch flameshot area selection                            |
 | super + v               | launch clipboard                                           |
 | super + s               | launch spotify                                             |
-| super + t               | launch telegram                                            |
+| super + t               | launch telegram (Default client is Kotatogram)             |
 
 ## Screenshots
 
@@ -87,7 +85,3 @@ set your default apps from sxhkd settings
 #### Spotify
 
 ![lockscreen](./spotify.png)
-
-#### Rofi launcher
-
-![neovim](./screen4.png)

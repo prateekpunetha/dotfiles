@@ -33,7 +33,6 @@ function stow_con() {
                             "README.md"
                             "spotify.png"
                             "ufetch_cava"
-                            "screen4.png"
                         )
 
     # go throw all files except ignore list
