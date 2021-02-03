@@ -7,8 +7,8 @@ alt + F1
     rofi_run -r
 
 # launch software
-super + {w,f,s,t,o,m}
-    {brave,nautilus,spotify,kotatogram-desktop,notion-app,mailspring}
+super + {w,f,s,t,m}
+    {brave,nautilus,spotify,kotatogram-desktop,mailspring}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}

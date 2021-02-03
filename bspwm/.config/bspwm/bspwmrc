@@ -59,8 +59,6 @@ bspc rule -a kitty desktop='^1' follow=on focus=on
 bspc rule -a Brave-browser desktop='^2'
 # 3 > telegram
 bspc rule -a KotatogramDesktop desktop='^3'
-# 4 > notion
-bspc rule -a Notion desktop='^4'
 # 5 > file manager
 bspc rule -a Org.gnome.Nautilus desktop='^5' follow=on focus=on
 # 6 > office
