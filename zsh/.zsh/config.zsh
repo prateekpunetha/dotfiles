@@ -24,6 +24,9 @@ if type rg &> /dev/null; then
     export FZF_DEFAULT_COMMAND='rg --files --hidden""'
 fi
 
+# emacs keybinding for beginning of line
+bindkey "^A" beginning-of-line
+
 # various aliases.
 alias free="free -h"
 alias fdisk="sudo fdisk -l"
