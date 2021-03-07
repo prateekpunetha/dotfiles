@@ -13,27 +13,20 @@ for player in $PLAYERS; do
         CURRENT=$player
     fi
 done
+# when no player is playing
 if [ -z $CURRENT ]; then
 echo "  No player is running"
 fi
 METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
+# remove everything in brackets and cut to 50 characters
 TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
-ARTIST=$(playerctl metadata artist)
-FULL_META=$(playerctl metadata)
 case $STATUS in
     "Playing")
-        # if spotify is playing on another device artist and song will be empty
-        if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-            echo $P_ICON"  ""Playing on Another Device"
-        else
             echo $P_ICON"  "$TRIM
-        fi;;
+            ;;
     "Paused")
-        if [[ "$ARTIST" == "" ]] && [[ "$FULL_META" =~ "spotify" ]]; then
-            echo $S_ICON"  "" Paused on Another Device"
-        else
             echo $S_ICON"  "$TRIM
-        fi;;
+            ;;
 esac
 
 # for pause play functionality
