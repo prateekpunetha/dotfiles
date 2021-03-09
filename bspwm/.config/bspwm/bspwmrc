@@ -25,7 +25,7 @@ redshift -t 6500:5200 -l geoclue2 &
 greenclip daemon &
 
 # Set some bsp specific stuff
-bspc monitor -d 一 二 三 四 五 六 七 八
+bspc monitor -d 一 二 三 四 五 六 七 八 九 十
 
 # bspwm settings
 bspc config border_width 0
