@@ -19,7 +19,7 @@ unclutter -idle 2 &
 picom --experimental-backends -b
 
 # start redshift
-redshift -t 6500:5200 -l geoclue2 &
+redshift -t 6500:5100 -l geoclue2 &
 
 # rofi greenclipboard daemon
 greenclip daemon &
