@@ -1,0 +1,6 @@
+[user]
+	email = hi@prateekpunetha.dev
+	signingkey = 45AA485F2BD3F23E
+	name = prateekpunetha
+[commit]
+	gpgsign = true
