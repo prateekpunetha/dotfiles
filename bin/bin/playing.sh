@@ -24,7 +24,7 @@ else
     METADATA="$(playerctl -p $CURRENT metadata artist) - $(playerctl -p $CURRENT metadata title)"
 fi
 # remove everything in brackets and cut to 50 characters
-TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' | cut -c 1-50)
+TRIM=$(echo $METADATA | sed -e 's/([^()]*)//g' -e 's/%20/ /g' | cut -c 1-50)
 case $STATUS in
     "Playing")
             echo $P_ICON"  "$TRIM
