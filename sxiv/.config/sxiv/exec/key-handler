@@ -1,0 +1,18 @@
+#!/bin/sh
+while read file
+do
+        case "$1" in
+        "w")
+                cp "$file" .wallpaper.jpg &&
+                feh --bg-fill "$HOME"/.wallpaper.jpg &&
+                betterlockscreen -u "$HOME"/.wallpaper.jpg &>/dev/null &&
+                notify-send "New Wallpaper Set" ;;
+        "d")
+                mv "$file" ~/.trash ;;
+        "r")
+                convert -rotate 90 "$file" "$file" ;;
+        "c")
+                echo -n "$file" | xclip -selection clipboard ;;
+        esac
+done
+
