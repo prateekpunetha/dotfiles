@@ -7,8 +7,6 @@ do
                 feh --bg-fill "$HOME"/.wallpaper.jpg &&
                 betterlockscreen -u "$HOME"/.wallpaper.jpg &>/dev/null &&
                 notify-send "New Wallpaper Set" ;;
-        "d")
-                mv "$file" ~/.trash ;;
         "r")
                 convert -rotate 90 "$file" "$file" ;;
         "c")
