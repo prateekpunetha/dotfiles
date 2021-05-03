@@ -2,14 +2,14 @@
 while read file
 do
         case "$1" in
-        "w")
+        "w")    # set wallpaper
                 cp "$file" .wallpaper.jpg &&
                 feh --bg-fill "$HOME"/.wallpaper.jpg &&
                 betterlockscreen -u "$HOME"/.wallpaper.jpg &>/dev/null &&
                 notify-send "New Wallpaper Set" ;;
-        "r")
+        "r")    # rotate image by 90°
                 convert -rotate 90 "$file" "$file" ;;
-        "c")
+        "c")    # copy file name
                 echo -n "$file" | xclip -selection clipboard ;;
         esac
 done
