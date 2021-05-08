@@ -9,8 +9,9 @@ do
                 notify-send "New Wallpaper Set" ;;
         "r")    # rotate image by 90°
                 convert -rotate 90 "$file" "$file" ;;
+        "R")    # rotate image by 180°
+                convert -rotate 180 "$file" "$file" ;;
         "c")    # copy file name
                 echo -n "$file" | xclip -selection clipboard ;;
         esac
 done
-
