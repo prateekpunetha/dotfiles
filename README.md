@@ -61,7 +61,8 @@ set your default apps from sxhkd settings
 | ctrl + alt + {h,j,k,l}  | contract window on given side                              |
 | super + direction       | move floating window on given direction                    |
 | print                   | take a full screenshot                                     |
-| print + shift           | launch flameshot area selection                            |
+| shift + print           | launch flameshot area selection                            |
+| alt + print             | take full screenshot after 5 seconds                       |
 | super + v               | launch clipboard                                           |
 | super + s               | launch spotify                                             |
 | super + t               | launch telegram (Default client is Kotatogram)             |
