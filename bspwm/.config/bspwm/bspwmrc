@@ -4,7 +4,9 @@
 xsetroot -cursor_name left_ptr
 
 # polybar
-polybar onsie &
+polybar workspaces &
+polybar playing &
+polybar widgets &
 
 # feh background
 ~/.fehbg &
