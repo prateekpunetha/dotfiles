@@ -31,8 +31,7 @@ function stow_con() {
                             ".gitignore"
                             ".gitmodules"
                             "README.md"
-                            "spotify.png"
-                            "ufetch_cava"
+                            "screenshots"
                         )
 
     # go throw all files except ignore list

@@ -46,7 +46,7 @@ set your default apps from sxhkd settings
 | super + F1              | show keyboard shortcuts in a window                        |
 | super + w               | launch browser (default is brave)                          |
 | super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is Nautilus)                  |
+| super + f               | launch file manager (default is Nemo)                      |
 | super + shift + r       | reload sxhkd settings                                      |
 | super + q               | kill current window                                        |
 | super + g               | swap current window with the biggest                       |
@@ -71,8 +71,4 @@ set your default apps from sxhkd settings
 
 #### Clean
 
-![desktop](./ufetch_cava.png)
-
-#### Spotify
-
-![lockscreen](./spotify.png)
+![desktop](./screenshots/one.png)
