@@ -34,6 +34,7 @@ alias zsh="exec zsh"
 alias n="nvim"
 alias cat="bat --style=grid,header"
 alias orphan="yay -Rns $(pacman -Qtdq)"
+alias btm="btm --battery"
 
 # clear greenclip history
 function 'gnclr'() {
