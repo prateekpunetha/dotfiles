@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Accepts two argument $1 for changing start threshold and $2 for changing stop threshold
+echo "$1" | sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold
+echo "$2" | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
