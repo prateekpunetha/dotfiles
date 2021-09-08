@@ -1,5 +1,5 @@
-/* 
-  Copyright © Blacksuan19 @ 2020 
+/*
+  Copyright © Blacksuan19 @ 2020
   part of material ocean colorscheme
   licensed under GNU's GPL 3
 */
@@ -80,6 +80,11 @@ element {
   orientation: horizontal;
   border-radius: 4px;
   padding: 6px 6px 6px 6px;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
 }
 
 element-icon {
