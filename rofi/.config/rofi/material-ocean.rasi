@@ -89,7 +89,7 @@ element-text, element-icon {
 
 element-icon {
   size: 18px;
-  border: 0px;
+  border: 4px;
 }
 
 element selected {
