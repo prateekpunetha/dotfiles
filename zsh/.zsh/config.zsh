@@ -35,8 +35,3 @@ alias n="nvim"
 alias cat="bat --style=grid,header"
 alias orphan="yay -Rns $(pacman -Qtdq)"
 alias btm="btm --battery"
-
-# clear greenclip history
-function 'gnclr'() {
-pkill greenclip && greenclip clear && greenclip daemon &
-} >/dev/null 2>&1

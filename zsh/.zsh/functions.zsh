@@ -41,3 +41,8 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+# clear greenclip history
+gnclr() {
+    pkill greenclip && greenclip clear && greenclip daemon &
+} >/dev/null 2>&1
