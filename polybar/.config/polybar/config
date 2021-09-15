@@ -144,7 +144,6 @@ format-full-prefix = " "
 type = internal/date
 interval = 2.0
 time =   %I:%M %p
-time-alt =   %a, %b %dth
 format = <label>
 format-background = ${color.accent}
 format-foreground =${color.fground}
