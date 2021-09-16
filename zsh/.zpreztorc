@@ -10,7 +10,6 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'git' \
-  'tmux' \
   'autosuggestions' \
   'prompt'
 
@@ -22,9 +21,6 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Set the prompt theme to load.
 zstyle ':prezto:module:prompt' theme 'pure'
-
-# Auto start a tmux session when Zsh is launched in a local terminal.
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # safe options for cp, rm, mv
 zstyle ':prezto:module:utility' safe-ops 'yes'
