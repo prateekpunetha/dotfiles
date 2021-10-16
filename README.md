@@ -5,7 +5,7 @@
 - \*NIX system
 - [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
-- [picom-joanburg](https://github.com/jonaburg/picom)
+- [picom-jonaburg](https://github.com/jonaburg/picom)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
 - [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
@@ -24,8 +24,7 @@
 * Fonts
 
   > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont) (UI font)
-  > - [JetBrains Mono](https://www.jetbrains.com/lp/mono/) (Monospaced font)
-  > - [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono/Regular/complete) (polybar icons)
+  > - [JetBrains Mono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono/) (Monospaced Font)
 
 ## Installation
 
