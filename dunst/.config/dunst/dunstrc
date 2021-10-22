@@ -47,11 +47,6 @@ title = Dunst
 class = Dunst
 corner_radius = 0
 
-[shortcuts]
-close = ctrl+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-
 [urgency_low]
 background = "#0F111A"
 foreground = "#a4a4a4"
