@@ -1,0 +1,50 @@
+# some basic stuff
+auto-reload no
+reload-time 120
+reload-threads 4
+download-retries 4
+download-timeout 10
+prepopulate-query-feeds yes
+goto-next-feed no
+max-items 50
+
+macro m set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
+browser "qutebrowser %u >/dev/null 2>&1 &"
+
+# basic keybindings
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+bind-key U show-urls
+bind-key x pb-delete
+bind-key o open-in-browser-and-mark-read
+
+# color scheme
+color background          white     default
+color listnormal          cyan      default
+color listnormal_unread   red       default
+color listfocus           red       white       standout    bold
+color listfocus_unread    red       white       bold        standout
+color info                yellow    black
+color article             white     default
+
+# highlights
+highlight article "^(Feed|Link):.*$" color6 default bold
+highlight article "^(Title|Date|Author):.*$" color6 default bold
+highlight article "https?://[^ ]+" color10 default underline
+highlight article "\\[[0-9]+\\]" color10 default bold
+highlight article "\\[image\\ [0-9]+\\]" color10 default bold
+highlight feedlist "^─.*$" color6 color236 bold
+#highlight feedlist ".*0/0.." default default invis
