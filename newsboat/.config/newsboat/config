@@ -8,7 +8,7 @@ prepopulate-query-feeds yes
 goto-next-feed no
 max-items 50
 
-macro m set browser "mpv %u" ; open-in-browser ; set browser "elinks %u"
+macro m set browser "mpv -quiet %u" ; open-in-browser ; set browser "elinks %u"
 browser "qutebrowser %u >/dev/null 2>&1 &"
 
 # basic keybindings
@@ -47,4 +47,5 @@ highlight article "https?://[^ ]+" color10 default underline
 highlight article "\\[[0-9]+\\]" color10 default bold
 highlight article "\\[image\\ [0-9]+\\]" color10 default bold
 highlight feedlist "^─.*$" color6 color236 bold
-#highlight feedlist ".*0/0.." default default invis
+highlight feedlist ".*(0/0))" black
+highlight feedlist "(0/0).*" yellow
