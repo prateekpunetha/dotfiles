@@ -8,7 +8,7 @@ prepopulate-query-feeds yes
 goto-next-feed no
 max-items 50
 
-macro m set browser "mpv -quiet %u" ; open-in-browser ; set browser "elinks %u"
+macro m set browser "mpv -quiet %u" ; open-in-browser ; set browser "qutebrowser %u"
 browser "qutebrowser %u >/dev/null 2>&1 &"
 
 # basic keybindings
