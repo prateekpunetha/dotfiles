@@ -51,6 +51,9 @@ bspc config pointer_action3 resize_corner
 
 # some window rules
 
+# always tile zathura
+bspc rule -a Zathura state=tiled
+
 # always float feh
 bspc rule -a feh state=floating follow=on
 
@@ -65,4 +68,3 @@ bspc rule -a KotatogramDesktop desktop='^3'
 bspc rule -a Nemo desktop='^5' follow=on focus=on
 # 6 > office
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
-bspc rule -a Xreader desktop='^6' follow=on focus=on
