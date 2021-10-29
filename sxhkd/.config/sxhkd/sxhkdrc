@@ -6,9 +6,13 @@ super + Return
 alt + F1
     rofi_run -r
 
-# launch software
-super + {w,f,s,t,m,r}
-    {brave,nemo,spotify,kotatogram-desktop,kitty -e neomutt,kitty -e newsboat}
+# launch programs
+super + {w,f,s,t}
+    {brave,nemo,spotify,kotatogram-desktop}
+
+# launch TUI programs
+super + {m,n,r}
+    {kitty --class="neomutt" neomutt >/dev/null 2>&1 &,kitty --class="newsboat" newsboat >/dev/null 2>&1 &, kitty --class="ranger" ranger >/dev/null 2>&1 &}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
