@@ -82,6 +82,18 @@ XF86MonBrightness{Up,Down}
 ctrl + {Right,Left,Up,Down}
     playerctl {next,previous,play,pause}
 
+# Show dunctl history
+ctrl + grave
+    dunstctl history-pop
+
+# Close last notification
+control + space
+    dunstctl close
+
+# Close all notifications
+control + shift + space
+    dunstctl close-all
+
 # restart polybar
 super + shift + p
     fixpoly; notify-send 'polybar' 'Restarted'
