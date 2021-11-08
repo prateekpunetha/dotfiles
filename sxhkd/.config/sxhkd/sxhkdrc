@@ -12,7 +12,7 @@ super + {w,f,s,t}
 
 # launch TUI programs
 super + {m,n,r}
-    {kitty --class="neomutt" neomutt >/dev/null 2>&1 &,kitty --class="newsboat" newsboat >/dev/null 2>&1 &, kitty --class="ranger" ranger >/dev/null 2>&1 &}
+    {kitty --class="neomutt" neomutt,kitty --class="newsboat" newsboat, kitty --class="ranger" ranger}
 
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
