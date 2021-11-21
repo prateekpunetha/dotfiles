@@ -1,5 +1,5 @@
 # some basic stuff
-auto-reload no
+auto-reload yes
 reload-time 120
 reload-threads 4
 download-retries 4
