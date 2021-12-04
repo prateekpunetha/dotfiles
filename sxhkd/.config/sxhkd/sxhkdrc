@@ -14,6 +14,10 @@ super + {w,f,s,t}
 super + {m,n,r}
     {kitty --class="neomutt" neomutt,kitty --class="newsboat" newsboat, kitty --class="ranger" ranger}
 
+# auto change wallpaper
+super + {a}
+    {unsplash}
+
 # keybindings, clipboard, logout, calculator
 super + {F1,v,x,c}
    rofi_run {-s,-c,-l,-q}
