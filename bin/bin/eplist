@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# I Prefer the episode name of the show in the video File, Because It is informative,
+# looks simple, and is just clean to read.
+# This script filters the Wikipedia source and outputs the episode names.
+# With this list, I can just bulk rename the 'default' file names.
+# Example: eplist 'https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_(season_2)'
+
+curl -s "$1?action=raw" | grep -B10 'ShortSummary' | grep -w 'Title' | sed 's/.*Title.*= //' | awk 'NF' | nl | tr -s ' '
