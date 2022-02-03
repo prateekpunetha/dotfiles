@@ -64,7 +64,7 @@ super + {_,shift + }{Left,Down,Up,Right}
 
 # full screenshot, selection area, full in 5 seconds
 Print + {_,shift,alt}
-    flameshot {full -p,gui -p,full -d 5000 -p} /home/prateek/Pictures/Screenshots
+    flameshot {full,gui,full -d 5000}
 
 # increase/decrease volume by 5%
 XF86Audio{Raise,Lower}Volume
