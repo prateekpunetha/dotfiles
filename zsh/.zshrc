@@ -6,4 +6,5 @@ source $HOME/.zsh/functions.zsh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export LESSHISTFILE=-
+export PASSWORD_STORE_DIR="$HOME/.local/share/password-store"
 GPG_TTY=$(tty)
