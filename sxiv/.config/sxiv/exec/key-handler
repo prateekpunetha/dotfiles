@@ -11,8 +11,6 @@ do
                 convert -rotate 90 "$file" "$file" ;;
         "R")    # rotate image by 180°
                 convert -rotate 180 "$file" "$file" ;;
-        "d")    # delete image (move the image to ~/.trash), later the oldest no. of image, shall be deleted every n days with script followed by a cronjob
-                mv "$file" ~/.trash ;;
         "c")    # copy file name
                 echo -n "$file" | xclip -selection clipboard ;;
         esac
