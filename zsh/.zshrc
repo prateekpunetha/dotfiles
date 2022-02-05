@@ -5,4 +5,5 @@ source $HOME/.zsh/config.zsh
 source $HOME/.zsh/functions.zsh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+export LESSHISTFILE=-
 GPG_TTY=$(tty)
