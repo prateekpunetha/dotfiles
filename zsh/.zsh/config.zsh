@@ -38,3 +38,7 @@ alias btm="btm --battery"
 alias copy="xclip -selection clipboard"
 alias rangercd=". ranger"
 alias alive="systemd-inhibit --what=handle-lid-switch sleep"
+
+# cleanup
+alias wget="wget --hsts-file /tmp/wgethist.txt"
+
