@@ -2,6 +2,7 @@
 
 # set important paths
 export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 
 [ -d /sbin ] && PATH="$PATH:/sbin"
 [ -d /usr/sbin ] && PATH="$PATH:/usr/sbin"
