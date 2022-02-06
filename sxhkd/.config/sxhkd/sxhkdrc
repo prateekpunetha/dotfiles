@@ -8,7 +8,7 @@ alt + F1
 
 # launch programs
 super + {w,f,s,t}
-    {brave,nemo,spotify,kotatogram-desktop}
+    {chromium,nemo,spotify,kotatogram-desktop}
 
 # launch TUI programs
 super + {m,n,r}
