@@ -9,9 +9,8 @@ video_pref='bestvideo[height<=?1080][vcodec!=vp9]+bestaudio/best'
 enable_search_hist=0
 enable_hist=0
 
-# Enable Looping
-# After a video ends it will bring up the results menu again
-is_loop=1
+# Enable Search Again (After closing fzf make another search)
+search_again=1
 
 # Enable Thumbnails
 show_thumbnails=1
