@@ -11,8 +11,8 @@ super + {w,f,s,t}
     {chromium,nemo,spotify,kotatogram-desktop}
 
 # launch TUI programs
-super + {m,n,r}
-    {kitty --class="neomutt" neomutt,kitty --class="newsboat" newsboat, kitty --class="ranger" ranger}
+super + {m,n,r,y}
+    {kitty --class="neomutt" neomutt,kitty --class="newsboat" newsboat,kitty --class="ranger" ranger, kitty --class="ytfzf" ytfzf}
 
 # auto change wallpaper
 super + {a}
