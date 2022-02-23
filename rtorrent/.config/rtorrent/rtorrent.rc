@@ -1,0 +1,190 @@
+## Instance layout (base paths)
+method.insert = cfg.basedir,  private|const|string, (cat,"/home/prateek/Videos/Torrent/")
+method.insert = cfg.download, private|const|string, (cat,(cfg.basedir),"download/")
+method.insert = cfg.logs,     private|const|string, (cat,(cfg.basedir),"log/")
+method.insert = cfg.logfile,  private|const|string, (cat,(cfg.logs),"rtorrent-",(system.time),".log")
+method.insert = cfg.session,  private|const|string, (cat,(cfg.basedir),".session/")
+method.insert = cfg.watch,    private|const|string, (cat,(cfg.basedir),"watch/")
+
+
+## Create instance directories
+execute.throw = sh, -c, (cat,\
+    "mkdir -p \"",(cfg.download),"\" ",\
+    "\"",(cfg.logs),"\" ",\
+    "\"",(cfg.session),"\" ",\
+    "\"",(cfg.watch),"/load\" ",\
+    "\"",(cfg.watch),"/start\" ")
+
+
+## Listening port for incoming peer traffic (fixed; you can also randomize it)
+network.port_range.set = 50000-50000
+network.port_random.set = no
+
+
+## Tracker-less torrent and UDP tracker support
+## (conservative settings for 'private' trackers, change for 'public')
+dht.mode.set = auto
+protocol.pex.set = yes
+
+trackers.use_udp.set = no
+
+
+## Peer settings
+throttle.max_uploads.set = 100
+throttle.max_uploads.global.set = 250
+
+throttle.min_peers.normal.set = 20
+throttle.max_peers.normal.set = 60
+throttle.min_peers.seed.set = 30
+throttle.max_peers.seed.set = 80
+trackers.numwant.set = 80
+
+protocol.encryption.set = allow_incoming,try_outgoing,enable_retry
+
+
+## Limits for file handle resources, this is optimized for
+## an `ulimit` of 1024 (a common default). You MUST leave
+## a ceiling of handles reserved for rTorrent's internal needs!
+network.http.max_open.set = 50
+network.max_open_files.set = 600
+network.max_open_sockets.set = 300
+
+
+## Memory resource usage (increase if you have a large number of items loaded,
+## and/or the available resources to spend)
+pieces.memory.max.set = 1800M
+network.xmlrpc.size_limit.set = 4M
+
+
+## Basic operational settings (no need to change these)
+session.path.set = (cat, (cfg.session))
+directory.default.set = (cat, (cfg.download))
+log.execute = (cat, (cfg.logs), "execute.log")
+#log.xmlrpc = (cat, (cfg.logs), "xmlrpc.log")
+execute.nothrow = sh, -c, (cat, "echo >",\
+    (session.path), "rtorrent.pid", " ",(system.pid))
+
+
+## Other operational settings (check & adapt)
+encoding.add = utf8
+system.umask.set = 0027
+system.cwd.set = (directory.default)
+network.http.dns_cache_timeout.set = 25
+schedule2 = monitor_diskspace, 15, 60, ((close_low_diskspace, 1000M))
+#pieces.hash.on_completion.set = no
+#view.sort_current = seeding, greater=d.ratio=
+#keys.layout.set = qwerty
+#network.http.capath.set = "/etc/ssl/certs"
+#network.http.ssl_verify_peer.set = 0
+#network.http.ssl_verify_host.set = 0
+
+
+## Some additional values and commands
+method.insert = system.startup_time, value|const, (system.time)
+method.insert = d.data_path, simple,\
+    "if=(d.is_multi_file),\
+        (cat, (d.directory), /),\
+        (cat, (d.directory), /, (d.name))"
+method.insert = d.session_file, simple, "cat=(session.path), (d.hash), .torrent"
+
+
+## Watch directories (add more as you like, but use unique schedule names)
+## Add torrent
+schedule2 = watch_load, 11, 10, ((load.verbose, (cat, (cfg.watch), "load/*.torrent")))
+schedule = watch_directory,1,5,"load.start=~/Downloads/*.torrent,d.directory.set=~/Videos/Torrent/download/,d.delete_tied="
+
+## Add & download straight away
+schedule2 = watch_start, 10, 10, ((load.start_verbose, (cat, (cfg.watch), "start/*.torrent")))
+
+
+## Run the rTorrent process as a daemon in the background
+## (and control via XMLRPC sockets)
+#system.daemon.set = true
+#network.scgi.open_local = (cat,(session.path),rpc.socket)
+#execute.nothrow = chmod,770,(cat,(session.path),rpc.socket)
+
+
+## Logging:
+##   Levels = critical error warn notice info debug
+##   Groups = connection_* dht_* peer_* rpc_* storage_* thread_* tracker_* torrent_*
+print = (cat, "Logging to ", (cfg.logfile))
+log.open_file = "log", (cfg.logfile)
+log.add_output = "info", "log"
+#log.add_output = "tracker_debug", "log"
+
+## Performance
+# Global upload and download rate in KiB, `0` for unlimited (`download_rate`, `upload_rate`)
+throttle.global_down.max_rate.set_kb = 8700
+throttle.global_up.max_rate.set_kb   = 2200
+
+# Maximum number of simultaneous downloads and uploads slots (global slots!) (`max_downloads_global`, `max_uploads_global`)
+throttle.max_downloads.global.set = 300
+throttle.max_uploads.global.set   = 300
+
+# Maximum and minimum number of peers to connect to per torrent while downloading (`min_peers`, `max_peers`) Default: `100` and `200` respectively
+throttle.min_peers.normal.set = 99
+throttle.max_peers.normal.set = 100
+
+# Same as above but for seeding completed torrents (seeds per torrent), `-1` for same as downloading (`min_peers_seed`, `max_peers_seed`) Default: `-1` for both
+throttle.min_peers.seed.set = -1
+throttle.max_peers.seed.set = -1
+
+# Maximum number of simultaneous downloads and uploads slots per torrent (`max_uploads`) Default: `50` for both
+throttle.max_downloads.set = 50
+throttle.max_uploads.set = 50
+
+# Set the numwant field sent to the tracker, which indicates how many peers we want.
+#  A negative value disables this feature. Default: `-1` (`tracker_numwant`)
+trackers.numwant.set = 100
+
+# Set the max amount of memory address space used to mapping file chunks. This refers to memory mapping, not
+#  physical memory allocation. Default: `1GB` (`max_memory_usage`)
+# This may also be set using ulimit -m where 3/4 will be allocated to file chunks.
+pieces.memory.max.set = 2048M
+
+# Maximum number of connections rtorrent can accept/make (`sockets`)
+network.max_open_sockets.set = 999
+
+# Maximum number of open files rtorrent can keep open (you have to modify the system wide settings with ulimit!) (`set_max_open_files`)
+network.max_open_files.set = 600
+
+# Maximum number of simultaneous HTTP request (used by announce or scrape requests) Default: `32` (`set_max_open_http`)
+network.http.max_open.set = 99
+
+# Send and receive buffer size for socket. Disabled by default (`0`), this means the default is used by OS
+#  (you have to modify the system wide settings!) (`send_buffer_size`, `receive_buffer_size`)
+# Increasing buffer sizes may help reduce disk seeking, connection polling as more data is buffered each time
+#  the socket is written to. It will result higher memory usage (not visible in rtorrent process!).
+network.receive_buffer.size.set =  4M
+network.send_buffer.size.set    = 12M
+
+# Preloading a piece of a file. Default: `0` Possible values: `0` (Off) , `1` (Madvise) , `2` (Direct paging).
+pieces.preload.type.set = 2
+#pieces.preload.min_size.set = 262144
+#pieces.preload.min_rate.set = 5120
+
+# TOS of peer connections. Default: `throughput`. If the option is set to `default` then the system default TOS
+#  is used. A hex value may be used for non-standard settings.  (`tos`)
+# Possible values: `[default|lowdelay|throughput|reliability|mincost]` or a hex value.
+#network.tos.set = throughput
+
+# CURL options to add support for nonofficial SSL trackers and peers
+network.http.ssl_verify_host.set = 0
+network.http.ssl_verify_peer.set = 0
+
+# CURL option to lower DNS timeout. Default: `60`.
+network.http.dns_cache_timeout.set = 25
+
+# Max packet size using xmlrpc. Default: `524288` (xmlrpc_size_limit)
+network.xmlrpc.size_limit.set = 2M
+
+# Save all the sessions in every 12 hours instead of the default 20 minutes.
+schedule2 = session_save, 1200, 43200, ((session.save))
+
+# Prune file status in every 24 hours, this is the default setting.
+#schedule2 = prune_file_status, 3600, 86400, ((system.file_status_cache.prune))
+
+# Whether to allocate disk space for a new torrent. Default: `0`
+#system.file.allocate.set = 0
+
+### END of rtorrent.rc ###
