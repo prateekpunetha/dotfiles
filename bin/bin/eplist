@@ -6,4 +6,4 @@
 # With this list, I can just bulk rename the 'default' file names.
 # Example: eplist 'https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba_(season_2)'
 
-curl -s "$1?action=raw" | grep -B10 'ShortSummary' | grep -w 'Title' | sed 's/.*Title.*= //' | awk 'NF' | nl -w6 -w1 -s " - "
+curl -s "$1?action=raw" | grep -B10 'ShortSummary' | grep -w 'Title' | sed 's/.*Title.*= //' | nl -w6 -w1 -s " - "
