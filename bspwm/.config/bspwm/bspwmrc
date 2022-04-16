@@ -63,7 +63,7 @@ bspc rule -a kitty desktop='^1' follow=on focus=on
 # 2 > web
 bspc rule -a Chromium desktop='^2'
 # 3 > telegram
-bspc rule -a KotatogramDesktop desktop='^3'
+bspc rule -a TelegramDesktop='^3'
 # 5 > file manager
 bspc rule -a Nemo desktop='^5' follow=on focus=on
 # 6 > office
