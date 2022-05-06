@@ -66,8 +66,9 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a TelegramDesktop='^3'
 # 5 > file manager
 bspc rule -a Nemo desktop='^5' follow=on focus=on
-# 6 > office
+# 6 > office & Ferdium
 bspc rule -a DesktopEditors desktop='^6' follow=on focus=on
+bspc rule -a Ferdium desktop='^6' follow=off
 # 7 > newsboat
 bspc rule -a newsboat desktop='^7' follow=on focus=on
 # 8 > neomutt
