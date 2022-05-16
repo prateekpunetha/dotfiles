@@ -2,5 +2,4 @@
 
 #Toggle Microphone Using pactl
 
-pactl list sources | grep -qi 'Mute: yes' && pactl set-source-mute 1 false || pactl set-source-mute 1 true
-
+pacmd list-sources | grep -oP 'index: \d+' | awk '{ print $2 }' | xargs -I{} pactl set-source-mute {} toggle
