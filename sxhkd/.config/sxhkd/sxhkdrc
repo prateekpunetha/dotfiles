@@ -7,8 +7,8 @@ alt + F1
     rofi_run -r
 
 # launch programs
-super + {w,f,s,t}
-    {chromium,nemo,spotify,telegram-desktop}
+super + {w,f,t}
+    {chromium,nemo,telegram-desktop}
 
 # launch TUI programs
 super + {m,n,r,y}
