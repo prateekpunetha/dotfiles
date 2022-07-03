@@ -10,35 +10,8 @@ setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
-# zsh completion
-autoload -U compinit && compinit
-
-# ls colors
-eval $( dircolors -b $HOME/.dircolors )
-
 # default editor
 export EDITOR=nvim
 
-# determines search program for fzf
-if type rg &> /dev/null; then
-    export FZF_DEFAULT_COMMAND='rg --files --hidden""'
-fi
-
 # emacs keybinding for beginning of line
 bindkey "^A" beginning-of-line
-
-# various aliases.
-alias free="free -h"
-alias fdisk="sudo fdisk -l"
-alias zsh="exec zsh"
-alias n="nvim"
-alias cat="bat --style=grid,header"
-alias orphan="pacman -Rs $(pacman -Qqtd)"
-alias btm="btm --battery"
-alias copy="xclip -selection clipboard"
-alias rangercd=". ranger"
-alias alive="systemd-inhibit --what=handle-lid-switch sleep"
-
-# cleanup
-alias wget="wget --hsts-file /tmp/wgethist.txt"
-
