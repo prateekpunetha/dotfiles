@@ -63,7 +63,7 @@ set your default apps from sxhkd settings
 | shift + print           | launch flameshot area selection                            |
 | alt + print             | take full screenshot after 5 seconds                       |
 | super + v               | launch clipboard                                           |
-| super + t               | launch telegram (Default client is Kotatogram)             |
+| super + t               | launch telegram                                            |
 
 ## Screenshots
 
