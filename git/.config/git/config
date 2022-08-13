@@ -4,3 +4,5 @@
 	name = prateekpunetha
 [commit]
 	gpgsign = true
+[core]
+	pager = bat --style=grid,header
