@@ -1,4 +1,3 @@
-
 ;;;;;;;;;;;;;
 ;; Colors  ;;
 ;;;;;;;;;;;;;
@@ -36,7 +35,7 @@ monitor-strict = false
 override-redirect = true
 wm-restack = bspwm
 bottom = false
-height = 30
+height = 26
 fixed-center = true
 offset-x = 6
 offset-y = 6
@@ -44,20 +43,20 @@ cursor-click = pointer
 tray-position = none
 background = ${color.bground}
 foreground = ${color.fground}
-font-0 = "JetBrains Mono Nerd Font:size=9.4;1"
+font-0 = "JetBrains Mono Nerd Font:size=9;1"
 module-margin-left = 1
 module-margin-right = 1
 
 [bar/workspaces]
 inherit = bar/main
-width = 21.30%
+width = 18.28%
 offset-x = 15.2
 modules-left = workspaces
 
 [bar/widgets]
 inherit = bar/main
-width = 18.55%
-offset-x = 80.8%
+width = 18.60%
+offset-x = 80.5%
 modules-right = battery bluetooth network date
 
 [bar/playing]
