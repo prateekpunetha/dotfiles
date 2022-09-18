@@ -69,4 +69,4 @@ set your default apps from sxhkd settings
 
 #### Clean
 
-![desktop](./screenshots/one.png)
+![desktop](./screenshots/sshot.png)
