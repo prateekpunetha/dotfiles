@@ -55,8 +55,8 @@ modules-left = workspaces
 
 [bar/widgets]
 inherit = bar/main
-width = 18.60%
-offset-x = 80.5%
+width = 16.50%
+offset-x = 82.8%
 modules-right = battery bluetooth network date
 
 [bar/playing]
