@@ -98,6 +98,10 @@ control + space
 control + shift + space
     dunstctl close-all
 
+# check country (vpn)
+super + shift + i
+    getcountry
+
 # restart polybar
 super + shift + p
     fixpoly; notify-send 'polybar' 'Restarted'
