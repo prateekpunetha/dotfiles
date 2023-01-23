@@ -1,0 +1,5 @@
+#!/bin/bash
+
+notify-send -i info "Checking country..."
+
+notify-send -i 'bell' "$(curl -s ip-api.com | grep country | head -n1 | awk {'print $3'} | tr '""' ' ' | awk '{print $2}')"
