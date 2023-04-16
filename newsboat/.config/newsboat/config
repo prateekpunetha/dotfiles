@@ -8,7 +8,7 @@ prepopulate-query-feeds yes
 goto-next-feed no
 max-items 50
 
-macro m set browser "setsid -f mpv --ytdl-format='bestvideo[height<=?1080][vcodec!=vp9]+bestaudio/best' > /dev/null 2>&1 %u"; open-in-browser-and-mark-read; set browser "qutebrowser %u"
+macro m set browser "setsid -f mpv >/dev/null 2>&1"; open-in-browser-and-mark-read; open-in-browser; set browser qutebrowser
 browser "qutebrowser %u >/dev/null 2>&1 &"
 
 # basic keybindings
