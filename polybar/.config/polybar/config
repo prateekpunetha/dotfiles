@@ -108,7 +108,7 @@ poll-interval = 5
 time-format = %H:%M
 
 format-charging = <label-charging>
-format-charging-prefix = " "
+format-charging-prefix = "󰄌 "
 format-charging-background = ${color.bground}
 format-charging-foreground = ${color.fground}
 format-charging-padding = 1
@@ -148,7 +148,7 @@ type = internal/network
 interface = wlan0
 interval = 3
 label-connected = %{A1:rofi-wifi-menu.sh:}   %essid%%{A}
-label-disconnected = %{A1:rofi-wifi-menu.sh:}睊  Disconnected%{A}
+label-disconnected = %{A1:rofi-wifi-menu.sh:}󰖪 Disconnected%{A}
 format-connected = <label-connected>
 format-disconnected = <label-disconnected>
 

@@ -161,7 +161,7 @@ toggle_trust() {
 # Useful for status bars like polybar, etc.
 print_status() {
     if power_on; then
-        printf ''
+        printf '󰂯'
 
         mapfile -t paired_devices < <(bluetoothctl paired-devices | grep Device | cut -c 20)
         counter=0
@@ -184,7 +184,7 @@ print_status() {
            printf " On"
        fi
     else
-        echo " Off"
+        echo "󰂯 Off"
     fi
 }
 
