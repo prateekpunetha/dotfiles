@@ -66,13 +66,17 @@ super + {_,shift + }{Left,Down,Up,Right}
 Print + {_,shift,alt}
     flameshot {full,gui,full -d 5000}
 
-# increase/decrease volume by 5%
-XF86Audio{Raise,Lower}Volume
-    change-volume {up,down}
+# increase volume by 5%
+XF86AudioRaiseVolume
+    pamixer --unmute && pamixer -i 5 && dunstify -i audio-volume-high -r 2593 "Volume" "$(pamixer --get-volume)%"
+
+# decrease volume by 5%
+XF86AudioLowerVolume
+    pamixer --unmute && pamixer -d 5 && dunstify -i audio-volume-high -r 2593 "Volume"  "$(pamixer --get-volume)%"
 
 # toggle volume mute
 XF86AudioMute
-   change-volume mute
+    pamixer -t && dunstify -i audio-volume-muted -r 2593 "Volume" "Muted"
 
 # toggle mic mute
 XF86AudioMicMute

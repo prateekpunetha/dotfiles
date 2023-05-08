@@ -11,7 +11,7 @@
 - [Tmux](https://github.com/tmux/tmux)
 - [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
 - required programs
-  - pulseaudio (audio support)
+  - PipeWire (audio support)
   - dunst (notifcations daemon)
   - rofi (applications window)
   - polybar (top bar)
