@@ -1,0 +1,8 @@
+# Save in ~/Videos
+-o '~/Videos/ytdlp/%(uploader)s/%(title)s.%(ext)s'
+
+# Use aria2c
+--external-downloader aria2c --external-downloader-args '-c -j 4 -x 8 -s 8 -k 1M'
+
+# Subtitiles
+--convert-subs=srt --embed-subs --write-auto-sub --sub-lang 'en.*'
