@@ -1,15 +1,17 @@
 # some basic stuff
 auto-reload yes
 reload-time 120
-reload-threads 4
+reload-threads 10
 download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
 goto-next-feed no
-max-items 50
+show-read-articles yes
+max-items 100
 
-macro m set browser "setsid -f mpv >/dev/null 2>&1"; open-in-browser-and-mark-read; set browser qutebrowser
-browser "qutebrowser %u >/dev/null 2>&1 &"
+macro m set browser "setsid -f mpv --ytdl-format='bestvideo[height<=?1080]+bestaudio/best'"; open-in-browser-and-mark-read; set browser qutebrowser
+macro j set browser "yt-dlp"; open-in-browser-and-mark-read; set browser chromium
+browser "xdg-open '%u' >/dev/null 2>&1 &"
 
 # basic keybindings
 bind-key j down
@@ -33,19 +35,27 @@ bind-key o open-in-browser-and-mark-read
 
 # color scheme
 color background          white     default
-color listnormal          cyan      default
+color listnormal          white     default
 color listnormal_unread   red       default
 color listfocus           red       white       standout    bold
 color listfocus_unread    red       white       bold        standout
-color info                yellow    black
+color info                white     black
 color article             white     default
 
 # highlights
+highlight all "  VIDEOS" yellow
+highlight all "  BLOGS" yellow
+highlight all "  REDDIT" yellow
+highlight all "  TWITTER" yellow
+highlight all "  GIT" yellow
+highlight all "  PODCAST" yellow
+highlight all " 󰄛 Other" yellow
+highlight all "  Music" yellow
+
+highlight feedlist ".*(0/0))" black
 highlight article "^(Feed|Link):.*$" color6 default bold
 highlight article "^(Title|Date|Author):.*$" color6 default bold
 highlight article "https?://[^ ]+" color10 default underline
 highlight article "\\[[0-9]+\\]" color10 default bold
 highlight article "\\[image\\ [0-9]+\\]" color10 default bold
 highlight feedlist "^─.*$" color6 color236 bold
-highlight feedlist ".*(0/0))" black
-highlight feedlist "(0/0).*" yellow
