@@ -1,30 +1,36 @@
-[Material Oceanized](https://github.com/material-ocean) configuration for Bspwm and others.
+[Material Oceanized](https://github.com/material-ocean) themes and configuration
+for most programs I use.
+
+![desktop](./screenshots/sshot.png)
 
 ## Requirements
 
 - \*NIX system
-- [bspwm](https://wiki.archlinux.org/index.php/Bspwm)
-- [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd)
-- [picom-jonaburg](https://github.com/jonaburg/picom)
 - [Zsh](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)
-- [Prezto](https://github.com/sorin-ionescu/prezto)
 - [Tmux](https://github.com/tmux/tmux)
-- [GTK Theme](https://github.com/material-ocean/Gtk-Theme)
+
 - required programs
-  - PipeWire (audio support)
-  - dunst (notifcations daemon)
-  - rofi (applications window)
-  - polybar (top bar)
-  - ksuperkey (map meta to open rofi)
-  - light (brightness control)
-  - playerctl (control current player with media keys)
-  - flameshot (for taking screenshots)
-  - greenclip (clipboard history)
+
+  - [RoundedSBE](https://github.com/a-parhom/RoundedSBE) (rounded corners)
+  - [Colloid-light](https://dl.prateekpunetha.dev/stuff/Colloid-light.tar)
+    (theme)
+  - [Virtual Desktop Bar widget](https://aur.archlinux.org/packages/plasma5-applets-virtual-desktop-bar-git)
+    (bar)
+  - [touchegg](https://archlinux.org/packages/extra/x86_64/touchegg/) (touchpad
+    gestures)
+  - [unclutter](https://archlinux.org/packages/extra/x86_64/unclutter/) (hides
+    cursor when not in use)
+
+* Icons
+
+  > - [Tela](https://aur.archlinux.org/packages/tela-icon-theme-git)
 
 * Fonts
 
-  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont) (UI font)
-  > - [JetBrains Mono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono/) (Monospaced Font)
+  > - [San Francesco Display](https://github.com/AppleDesignResources/SanFranciscoFont)
+  >   (UI font)
+  > - [JetBrains Mono Nerd Font](https://aur.archlinux.org/packages/nerd-fonts-jetbrains-mono/)
+  >   (Monospaced Font)
 
 ## Installation
 
@@ -32,41 +38,27 @@
 - `cd ~/.dotfiles`
 - `./install.sh` to install everything (including fonts).
 
-## Customizations
+## keyboard shortcuts
 
-#### keyboard shortcuts
+you can change default shortcuts from system settings > shortcuts.
 
-Shortcuts are controlled by sxhkd, since there are no default applications handler you can
-set your default apps from sxhkd settings
-
-| key                     | function                                                   |
-| ----------------------- | ---------------------------------------------------------- |
-| win key(mod/super)      | launch rofi                                                |
-| super + F1              | show keyboard shortcuts in a window                        |
-| super + w               | launch browser (default is brave)                          |
-| super + Enter           | launch terminal (default is kitty)                         |
-| super + f               | launch file manager (default is Nemo)                      |
-| super + shift + r       | reload sxhkd settings                                      |
-| super + q               | kill current window                                        |
-| super + g               | swap current window with the biggest                       |
-| super + F9              | set window to tiled                                        |
-| super + F10             | set window to floating                                     |
-| super + F11             | set window to full screen                                  |
-| super + {h,j,k,l}       | focus the window on left, below, above, right respectively |
-| super + Tab             | focus last desktop                                         |
-| super + shift + 1-9     | move window to desktop number 1-9                          |
-| super + brackets        | focus window on left, right monitor                        |
-| super + alt + {h,j,k,l} | expand window on given side                                |
-| ctrl + alt + {h,j,k,l}  | contract window on given side                              |
-| super + direction       | move floating window on given direction                    |
-| print                   | take a full screenshot                                     |
-| shift + print           | launch flameshot area selection                            |
-| alt + print             | take full screenshot after 5 seconds                       |
-| super + v               | launch clipboard                                           |
-| super + t               | launch telegram                                            |
-
-## Screenshots
-
-#### Clean
-
-![desktop](./screenshots/sshot.png)
+| key                    | function                                                   |
+| ---------------------- | ---------------------------------------------------------- |
+| alt + super            | Launch KRunner                                             |
+| super + w              | launch browser (default is chromium)                       |
+| super + Enter          | launch terminal (default is kitty)                         |
+| super + f              | launch file manager (default is dolphin)                   |
+| super + t              | launch telegram                                            |
+| super + v              | launch clipboard                                           |
+| super + q              | kill current window                                        |
+| super + space          | set window to tiled                                        |
+| alt + space            | set window to floating                                     |
+| super + F11            | set window to full screen                                  |
+| super + {h,j,k,l}      | focus the window on left, below, above, right respectively |
+| super + Tab            | focus last desktop                                         |
+| super + 1-0            | move to workspaces                                         |
+| super + shift + 1-0    | move window to desktop number 1-0                          |
+| ctrl + alt + {h,j,k,l} | contract window on given side                              |
+| print                  | take a full screenshot                                     |
+| shift + print          | launch spectacle area selection                            |
+| alt + print            | take full screenshot after 5 seconds                       |

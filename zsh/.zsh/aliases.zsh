@@ -11,13 +11,3 @@ alias btm="btm --battery"
 alias copy="xclip -selection clipboard"
 alias rangercd=". ranger"
 alias alive="systemd-inhibit --what=handle-lid-switch sleep"
-alias wget="wget --hsts-file /tmp/wgethist.txt"
-
-# wireguard
-alias up="systemctl start wg-quick@wg0 --now"
-alias down="systemctl stop wg-quick@wg0 --now"
-
-# clear greenclip history
-gnclr() {
-    pkill greenclip && greenclip clear && greenclip daemon &
-} >/dev/null 2>&1

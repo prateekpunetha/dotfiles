@@ -1,6 +1,0 @@
-configuration {
-  font: "San Francisco Display 14.5";
-  kb-cancel: "Escape,Alt+F1";
-}
-
-@theme "~/.config/rofi/material-ocean.rasi"

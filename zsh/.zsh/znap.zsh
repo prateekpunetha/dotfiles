@@ -7,7 +7,6 @@ source ~/.zsh-snap/zsh-snap/znap.zsh
 
 # prmpt
 eval "$(starship init zsh)"
-znap prompt
 
 # stuff from prezto or oh-my-zsh
 znap source sorin-ionescu/prezto modules/{history,completion}
