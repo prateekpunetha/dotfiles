@@ -11,15 +11,10 @@ for most programs I use.
 
 - required programs
 
-  - [RoundedSBE](https://github.com/a-parhom/RoundedSBE) (rounded corners)
-  - [Colloid-light](https://dl.prateekpunetha.dev/stuff/Colloid-light.tar)
-    (theme)
-  - [Virtual Desktop Bar widget](https://aur.archlinux.org/packages/plasma5-applets-virtual-desktop-bar-git)
+  - [desktop-indicator](https://github.com/dhruv8sh/plasma6-desktop-indicator)
     (bar)
-  - [touchegg](https://archlinux.org/packages/extra/x86_64/touchegg/) (touchpad
     gestures)
-  - [unclutter](https://archlinux.org/packages/extra/x86_64/unclutter/) (hides
-    cursor when not in use)
+  - [switch-to-previous-desktop](https://invent.kde.org/vladz/switch-to-previous-desktop) (alt+tab )
 
 * Icons
 
@@ -61,4 +56,3 @@ you can change default shortcuts from system settings > shortcuts.
 | ctrl + alt + {h,j,k,l} | contract window on given side                              |
 | print                  | take a full screenshot                                     |
 | shift + print          | launch spectacle area selection                            |
-| alt + print            | take full screenshot after 5 seconds                       |
